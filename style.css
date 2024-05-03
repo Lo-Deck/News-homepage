@@ -1,0 +1,364 @@
+:root{
+    --softOrange: hsl(35, 77%, 62%);
+    --softRed: hsl(5, 85%, 63%);
+    --offWhite: hsl(36, 100%, 99%);
+    --grayishBlue: hsl(233, 8%, 79%);
+    --darkGrayishBlue: hsl(236, 13%, 42%);
+    --veryDarkBlue: hsl(240, 100%, 5%);
+}
+    
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400; 
+    font-style: normal;
+    color: var(--darkGrayishBlue);
+}
+
+img{
+    display: block;
+}
+
+.list{
+    list-style: none;
+}
+
+
+/*HEADER*/
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 21.4375rem;   
+    width: 100%;
+    padding: 1.75rem 0 2rem;
+}
+
+.image-title{
+    width: 2.8125rem;
+}
+
+.button-menu{
+    width: 2.5rem;
+    border-style: none;
+    background-color: inherit;
+}
+
+.button-menu:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.icon-menu{
+    width: 2.5rem;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(240, 100%, 5%, 0.5);
+    z-index: 2;
+}
+
+#menu{
+   visibility: hidden;
+   width: 16rem;
+   height: 100vh;
+   padding: 9rem 0 0 1.2rem;
+   background-color: var(--offWhite);
+   color: #000;
+   font-size: 1.2rem;  
+   position: absolute;
+        top:0; right: 0;
+   z-index: 10;
+}
+
+.close-menu{
+    position: absolute;
+        top: 1rem; right: 2rem; 
+}
+
+.close-menu:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.li-menu{
+    padding-bottom: 1rem;
+}
+
+.li-menu:hover{
+    cursor: pointer;
+    color: var(--softRed);
+}
+
+
+/*MAIN*/
+
+.container{
+    max-width: 21.4375rem;
+}
+
+.main-image{
+    width: 100%;
+}
+
+.main-title{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #000;
+    line-height: 1;
+    margin: 1.875rem 0 1.25rem;
+}
+
+.main-text{
+    line-height: 1.6;
+}
+
+.main-button{
+    background-color: var(--softRed);
+    color: #fff;
+    border-style: none;
+    font-size: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 3.2;
+    width: 11.5625rem;
+    margin: 1.875rem 0 4rem;
+}
+
+.main-button:hover{
+    cursor: pointer;
+    background-color: var(--veryDarkBlue);
+}
+
+
+/*ARTICLE*/
+
+.article-container{
+    max-width: 21.4375rem;
+    background-color: var(--veryDarkBlue);
+    padding: 1.5rem 1.25rem 1.875rem;
+    margin-bottom: 4rem;
+}
+
+.section-article-container{
+    margin: 2rem 0 0;
+}
+
+.article-title{
+    color: var(--softOrange);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.section-title{
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-title:hover{
+    cursor: pointer;
+    color: var(--softOrange);    
+}
+
+.section-text{
+    line-height: 1.6;
+    color: var(--grayishBlue);
+}
+
+hr{
+    color: var(--darkGrayishBlue);
+    margin-top: 1.8rem;
+}
+
+
+/*ASIDE*/
+
+.aside-container{
+    max-width: 21.4375rem;
+    margin-bottom: 5rem;
+}
+
+.section-aside-container{
+    display: flex;
+    margin-bottom: 2rem;
+    height: 8.0625rem;
+}
+
+.image-aside{
+    width: 6.25rem;
+    margin-right: 1.5rem;
+}
+
+.aside-title{
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 0.6rem;
+}
+
+.aside-title:hover{
+    cursor: pointer;
+    color: var(--softRed);
+}
+
+.aside-title span{
+    display: block;
+    color: var(--grayishBlue);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.aside-text{
+    line-height: 1.6;
+}
+
+
+@media screen and (min-width: 70rem)
+{
+
+    body{
+        display: grid; 
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(8, minmax(min-content, max-content));
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    .list{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    /*HEADER*/
+
+    .header-container{
+        align-items: center;
+        max-width: 100%;
+        grid-column: 1 / -1;
+        grid-row: 1 ;
+        padding: 3rem 0 3.25rem;
+    }
+
+    .image-title{
+        width: 4rem;  
+    }
+
+    .header-title{
+        flex: 1;
+    }
+
+    .button-menu{
+        display: none;  
+    }
+
+    .close-menu{
+        display: none;
+    }
+
+    #menu{
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        position: relative;
+        background-color: inherit;
+        color: inherit;
+        flex: 1;  
+     }
+
+
+    .hidden{
+        display: none;
+       /*position: relative;*/
+    }
+
+    .li-menu{
+        margin-left: 2.625rem;
+        padding-bottom: 0;
+    }
+
+
+    /*MAIN*/
+
+    .container{
+        max-width: 69.375rem;
+        grid-column: 1 / -1;
+        grid-row: 2 / -1;
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+    }
+
+    .main-section{
+        grid-column: 1 / 8;         
+        grid-row: 2 / 5;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(min-content, max-content));
+        row-gap: 2rem;
+        width: 45.625rem;     
+    }
+
+    .image-container{
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .main-image{
+        width: 45.625rem;     
+    }
+
+    .main-title{
+        font-size: 3.5rem;
+        width: 21.875rem;
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0 0 1.25rem;
+    }
+
+    .display-desktop{
+        grid-column: 2;
+        grid-row: 2;
+        width: 21.875rem;
+    }
+      
+
+    /*ARTICLE*/
+
+    .article-container{
+        max-width: 21.875rem;
+        grid-column: 8 / -1;
+        grid-row: 2 / 5;
+        justify-self: end;
+        align-self: start;  
+    }
+
+
+    /*ASIDE*/
+
+    .aside-container{
+        grid-column: 1 / -1;
+        grid-row: 7 / -1;     
+        display: flex;
+        max-width: 100%;
+    }
+
+}

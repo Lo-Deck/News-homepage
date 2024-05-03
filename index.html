@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+
+      <meta name="description" content="Exercise Frontend Mentor, News homepage">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+      <link href="style.css" rel="stylesheet" type="text/css">
+
+      <title>Frontend Mentor | News homepage</title>
+
+    </head>
+    <body>
+
+      <div id="background-menu"></div>
+
+      <header class="header-container">
+
+        <h1 class="header-title"><img class="image-title" src="./images/logo.svg" alt="logo web 3.0"></h1>
+
+        <button class="button-menu" id="open"><img class="icon-menu" src="./images/icon-menu.svg" alt=""></button>
+
+        <nav id="menu">
+          <img class="close-menu" id="close" src="./images/icon-menu-close.svg" alt="">
+          <ul class="list">
+            <li class="li-menu">Home</li>  
+            <li class="li-menu">New</li>
+            <li class="li-menu">Popular</li>
+            <li class="li-menu">Trending</li>
+            <li class="li-menu">Categories</li>
+          </ul>
+        </nav>
+
+      </header>
+ 
+      <main class="container">
+
+        <section class="main-section">
+
+          <picture class="image-container">
+            <source srcset="./images/image-web-3-desktop.jpg" media="(min-width: 70rem)">
+            <img class="main-image" src="./images/image-web-3-mobile.jpg" alt="">
+          </picture>
+
+          <h2 class="main-title">The Bright Future of Web 3.0?</h2>
+
+
+          <div class="display-desktop">
+            <p class="main-text">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+              But is it really fulfilling its promise?</p>
+            <button class="main-button">Read more</button>
+          </div>
+
+        </section>
+
+
+        <article class="article-container">
+          <h2 class="article-title">New</h2>
+
+          <section class="section-article-container">
+            <h3 class="section-title">Hydrogen VS Electric Cars</h3>
+            <p class="section-text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </section>
+
+          <hr>
+
+          <section class="section-article-container">
+            <h3 class="section-title">The Downsides of AI Artistry</h3>
+            <p class="section-text">What are the possible adverse effects of on-demand AI image generation?</p>
+          </section>
+
+          <hr>
+
+          <section class="section-article-container">
+            <h3 class="section-title">Is VC Funding Drying Up?</h3>
+            <p class="section-text">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </section>
+        </article>
+
+
+        <aside class="aside-container">
+
+          <section class="section-aside-container">
+            <img class="image-aside" src="./images/image-retro-pcs.jpg" alt="old computer">
+            <div class="display-text">
+              <h3 class="aside-title"><span>01</span>Reviving Retro PCs</h3>
+              <p class="aside-text">What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </section>
+
+          <section class="section-aside-container">
+            <img class="image-aside" src="./images/image-top-laptops.jpg" alt="keyboard">
+            <div class="display-text">
+              <h3 class="aside-title"><span>02</span>Top 10 Laptops of 2022</h3>
+              <p class="aside-text">Our best picks for various needs and budgets.</p>
+            </div>
+          </section>
+
+          <section class="section-aside-container">
+            <img class="image-aside" src="./images/image-gaming-growth.jpg" alt="gaming controller">
+            <div class="display-text">
+              <h3 class="aside-title"><span>03</span>The Growth of Gaming</h3>
+              <p class="aside-text">How the pandemic has sparked fresh opportunities.</p>
+            </div>
+          </section>
+          
+        </aside>
+
+      </main>
+
+    <script  src="./script.js"></script>
+
+    </body>
+
+</html>
